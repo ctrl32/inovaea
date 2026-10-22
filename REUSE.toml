@@ -4,7 +4,7 @@ version = 1
 path = ["firmware/**", "**/*.md", ".github/**", ".gitignore", ".gitattributes", ".editorconfig", "REUSE.toml", "LICENSE"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 ctrl32"
-SPDX-License-Identifier = "Apache-2.0"
+SPDX-License-Identifier = "GPL-3.0-or-later"
 
 [[annotations]]
 path = ["hardware/**"]
@@ -16,4 +16,4 @@ SPDX-License-Identifier = "CERN-OHL-S-2.0"
 path = ["docs/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 ctrl32"
-SPDX-License-Identifier = "CC-BY-4.0"
+SPDX-License-Identifier = "CC-BY-SA-4.0"

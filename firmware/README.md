@@ -8,4 +8,4 @@ pio run -t upload       # flash
 pio device monitor      # serial monitor (115200 baud)
 ```
 
-Licensed under [Apache-2.0](../LICENSES/Apache-2.0.txt).
+Licensed under [GPL-3.0-or-later](../LICENSES/GPL-3.0-or-later.txt).

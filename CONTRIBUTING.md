@@ -29,7 +29,7 @@ Contributions are accepted under the license of the directory they belong to
 
 ```c
 // SPDX-FileCopyrightText: 2026 Your Name
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: GPL-3.0-or-later
 ```
 
 ## Coding style

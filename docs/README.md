@@ -2,4 +2,4 @@
 
 User and build documentation for inovaea.
 
-Licensed under [CC-BY-4.0](../LICENSES/CC-BY-4.0.txt).
+Licensed under [CC-BY-SA-4.0](../LICENSES/CC-BY-SA-4.0.txt).
