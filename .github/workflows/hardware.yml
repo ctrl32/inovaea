@@ -1,0 +1,47 @@
+name: Hardware
+
+on:
+  push:
+    branches: [main]
+    paths: ["hardware/**", ".github/workflows/hardware.yml"]
+  pull_request:
+    paths: ["hardware/**", ".github/workflows/hardware.yml"]
+
+jobs:
+  kicad:
+    runs-on: ubuntu-latest
+    container: kicad/kicad:9.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: ERC
+        shell: bash
+        run: |
+          shopt -s globstar nullglob
+          for f in hardware/**/*.kicad_sch; do
+            kicad-cli sch erc --exit-code-violations -o "${f%.kicad_sch}-erc.rpt" "$f"
+          done
+      - name: DRC
+        shell: bash
+        run: |
+          shopt -s globstar nullglob
+          for f in hardware/**/*.kicad_pcb; do
+            kicad-cli pcb drc --exit-code-violations -o "${f%.kicad_pcb}-drc.rpt" "$f"
+          done
+      - name: Gerbers
+        shell: bash
+        run: |
+          shopt -s globstar nullglob
+          for f in hardware/**/*.kicad_pcb; do
+            out="production/$(basename "${f%.kicad_pcb}")"
+            mkdir -p "$out"
+            kicad-cli pcb export gerbers -o "$out/" "$f"
+            kicad-cli pcb export drill -o "$out/" "$f"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hardware
+          path: |
+            production/
+            hardware/**/*.rpt
+          if-no-files-found: ignore

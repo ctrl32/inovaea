@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.FCStd binary
+*.step binary
+*.stl binary
+*.png binary
+*.jpg binary
+*.pdf binary

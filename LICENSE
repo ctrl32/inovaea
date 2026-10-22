@@ -1,0 +1,20 @@
+inovaea
+Copyright (c) 2026 ctrl32
+
+This repository contains parts released under different licenses:
+
+  firmware/   Apache License 2.0                         LICENSES/Apache-2.0.txt
+  hardware/   CERN Open Hardware Licence v2 - Strongly   LICENSES/CERN-OHL-S-2.0.txt
+              Reciprocal
+  docs/       Creative Commons Attribution 4.0           LICENSES/CC-BY-4.0.txt
+              International
+
+Files outside these directories are licensed under the Apache License 2.0
+unless stated otherwise.
+
+Each file states its license with an SPDX identifier, either in the file
+header or in REUSE.toml (https://reuse.software). If a file says otherwise,
+the file-level statement takes precedence.
+
+The licenses above do not grant any rights to the inovaea name or logo.
+See TRADEMARKS.md.
