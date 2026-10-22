@@ -24,7 +24,7 @@ jobs:
       - run: pip install --upgrade platformio
       - run: pio run
         working-directory: firmware
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: firmware
           path: firmware/.pio/build/*/firmware.bin
