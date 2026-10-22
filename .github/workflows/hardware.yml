@@ -14,7 +14,7 @@ jobs:
       image: kicad/kicad:9.0
       options: --user root
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: ERC
         shell: bash
         run: |
